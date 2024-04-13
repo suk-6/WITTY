@@ -29,4 +29,5 @@ function hasEnteredSearch(){
 
 function hasFocusedSearch(){
     navSearchBar.style.setProperty("padding", "0px 1vh");
+    searchIcon.style.setProperty("opacity", "0")
 }

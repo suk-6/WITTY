@@ -1,6 +1,7 @@
 :root {
     --background-black : #191919;
     --background-white : #eeeeee;
+    --dukyoung-color : #006DBB;
 }
 
 * {
@@ -70,7 +71,7 @@ body {
     background-color: #333333;
     outline: none;
     border-radius: 10px;
-    border: 3px solid #006DBB;
+    border: 3px solid var(--dukyoung-color);
     z-index: -1;
 }
 
