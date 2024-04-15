@@ -5,18 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/font.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-</head>
+    <link rel="mainsheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" as="style"
+    crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
 <body onselectstart="return false">
     <div id="nav-bar-box">
+        <div id="WITTY-logo-box" onclick="window.scrollTo({top:0})">
+            <img id="WITTY-logo-svg" src="./svgs/WITTY-white.svg" alt="WITTY-white">
+            <div id="WITTY-logo-text">WITTY</div>
+        </div>
         <script src="main.js"></script>
         <form action="" id="nav-searchform">
             <input type="text" id="nav-bar-search" onblur="hasEnteredSearch()" onfocus="hasFocusedSearch()">
-            <label for="nav-bar-search" id="search-icon" class="material-symbols-outlined">search</label>
+            <label for="nav-bar-search" id="search-icon-box"><img src="./svgs/search.svg" alt="Search" id="search-icon"></label>
         </form>
     </div>
-    <script>
-    </script>
+    <div id="content-box">
+        <div class="teacher-index-card">
+            <div>
+                <div class="card-front">
+                    <img id="img" src="data:image/jpeg;base64,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" alt="">
+                    <p>백시환</p>
+                    <div>선생님</div>
+                </div>
+                <div class="card-back">
+                    <div>백시환 빵디</div>
+                    <p>광주 데모</p>
+                    <p>1층에 있어요</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

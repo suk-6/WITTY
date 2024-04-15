@@ -1,13 +1,15 @@
 let navSearchBar;
 let searchIcon;
 
+document.addEventListener("touchstart", function() {}, true);
+
 addEventListener("DOMContentLoaded", () => {
     navSearchBar = document.getElementById("nav-bar-search");
     searchIcon = document.getElementById("search-icon");
 })
 
 function hasEnteredSearch(){
-    let searchBarLength = (navSearchBar.value.length * 15) + 50;
+    let searchBarLength = (navSearchBar.value.length * 15) + 100;
     let searchMaxWidth = 250;
 
     if(navSearchBar.value){

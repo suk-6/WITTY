@@ -4,39 +4,71 @@
     --dukyoung-color : #006DBB;
 }
 
-* {
-    z-index: 1;
-}
-
 body {
     margin: 0;
 
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-color: var(--background-white);
+
+    /* overflow-x: hidden; */
+    overflow-y: scroll;
 }
 
+/*nav bar*/
 #nav-bar-box {
     background-color: var(--background-black);
-    width: 100vw;
+    width: 100%;
     height: 10vh;
+    z-index: 100;
     
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: right;
+    justify-content: space-between;
 
-    position: relative;
+    box-shadow: 0px 10px 10px -5px rgba(0,0,0,0.25);
+
+    /* position: fixed; */
+    position: sticky;
+    padding-top: 30px;
+    top: -30px;
+}
+
+#nav-bar-box > * {
+    margin: 0 2vw;
+}
+
+#WITTY-logo-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    cursor: default;
+}
+
+#WITTY-logo-svg {
+    width: 4vh;
+}
+
+#WITTY-logo-text {
+    font-size: 4vh;
+    font-family: "Pretendard Variable";
+    font-weight: 900;
+    color: #fff;
+
+    margin: 0 1vw;
 }
 
 #nav-searchform {
-    right: 2.5vw;
     position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
+
 
 #nav-bar-search {
     width: 5.5vh;
@@ -45,25 +77,31 @@ body {
 
     background: none;
 
-    border: 3px solid var(--background-white);
+    border: 0.2vw solid #fff;
     border-radius: 50px;
     box-sizing: border-box;
     padding: none;
 
     font-size: 2vh;
-    color: var(--background-white);
+    color: #fff;
 
     overflow: hidden;
 
     transition: .5s;
 }
 
-#search-icon {
-    color: var(--background-white);
+#search-icon-box {
     position: absolute;
-    transition: 0.2s;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 
-    font-size: 3vh;
+#search-icon {
+    transition: 0.2s;
+    width: 3vh;
+    filter: invert(99%) sepia(6%) saturate(785%) hue-rotate(249deg) brightness(112%) contrast(100%);
 }
 
 #nav-bar-search:focus {
@@ -72,18 +110,108 @@ body {
     outline: none;
     border-radius: 10px;
     border: 3px solid var(--dukyoung-color);
-    z-index: -1;
 }
 
 #nav-bar-search:focus + #search-icon {
     opacity: 0;
-    color: #006DBB;
-    z-index: -1;
+    color: var(--dukyoung-color);
 }   
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
+    #nav-bar-search {
+        border: none;
+    }
+
     #nav-bar-search:focus {
         width: 50vw;
         max-width: 300px;
+    }
+
+    #search-icon {
+        font-size: 4vh;
+    }
+}
+
+/* section */
+#content-box {
+    width: 100%;
+    height: 100%;
+    padding-top: 5vh;
+    border: 2vw solid rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, auto));
+    row-gap: 4vh;
+    column-gap: 2vw;
+}
+
+.teacher-index-card {
+    background-color: #fff;
+    border-radius: 7px;
+    box-shadow: 0px 10px 10px -5px rgba(0,0,0,0.25);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 5% 0 15% 0;
+
+    transform-style: preserve-3d;
+    transition: .4s;
+}
+
+.teacher-index-card > div {
+    position: relative;
+    text-align: center;
+}
+
+.card-back {
+    position: absolute;
+    opacity: 0;
+    color: #fff;
+    top: 0;
+}
+
+.card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    transition: .4s;
+}
+
+.teacher-index-card:hover .card-back {
+    opacity: 1;
+}
+
+.teacher-index-card:hover .card-front {
+    opacity: 0;
+}
+
+.teacher-index-card:hover {
+    background-color: var(--background-black);
+}
+
+#img {
+    width: 50%;
+    margin: 2vh;
+}
+
+.card-front > p {
+    font-size: 30px;
+    padding-top: 7%;
+    margin: 0;
+    font-family: "Pretendard Variable";
+    font-weight: 700;
+}
+
+.card-front > div {
+    font-family: "Pretendard Variable";
+    font-weight: 400;
+}
+
+@media (max-width: 500px) {
+    #content-box {
+        grid-template-columns: repeat(auto-fill, minmax(150px, auto));
+        border: 4vw solid rgba(0, 0, 0, 0);
     }
 }
