@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WITTY</title>
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="/notfound.css">
+    <!-- <link rel="mainsheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" /> -->
+    <link rel="stylesheet" as="style"
+    crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+<body onselectstart="return false">
+    <script src="/main.js"></script>
+    <div id="nav-bar-box">
+        <div id="WITTY-logo-box" onclick="location.href='/'">
+            <img id="WITTY-logo-svg" src="/svgs/WITTY-white.svg" alt="WITTY-white">
+            <div id="WITTY-logo-text">WITTY</div>
+        </div>
+        <form action="/search" method="GET" id="nav-searchform">
+            <input type="text" id="nav-bar-search" name="search" onblur="hasEnteredSearch()" onfocus="hasFocusedSearch()">
+            <label for="nav-bar-search" id="search-icon-box"><img src="/svgs/search.svg" alt="Search" id="search-icon"></label>
+        </form>
+    </div>
+    <div id="not-found-box">
+        <div id="not-found">요청 페이지를 찾을 수 없습니다 <%- randomEmoji %></div>
+    </div>
+</body>
+</html>

@@ -31,8 +31,9 @@ body {
 
     /* position: fixed; */
     position: sticky;
-    padding-top: 30px;
-    top: -30px;
+    top: 0px;
+
+    transition: top .2s;
 }
 
 #nav-bar-box > * {
@@ -62,7 +63,7 @@ body {
 }
 
 #nav-searchform {
-    position: relative;
+    position: sticky;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -140,9 +141,21 @@ body {
     border: 2vw solid rgba(0, 0, 0, 0);
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, auto));
-    row-gap: 4vh;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    row-gap: 3.5vh;
     column-gap: 2vw;
+    align-items: stretch;
+
+    animation-name: fadeIn;
+    animation-duration: 0.75s;
+
+    cursor: default;
+}
+
+#filter {
+    width: 100%;
+    height: auto;
+    text-align: right;
 }
 
 .teacher-index-card {
@@ -155,16 +168,23 @@ body {
     justify-content: center;
     align-items: center;
 
-    padding: 5% 0 15% 0;
+    padding: 4% 0 30% 0;
 
     transform-style: preserve-3d;
     transition: .4s;
+}
+.teacher-index-card:hover {
+    overflow-y: scroll;
+}
+
+.teacher-index-card::-webkit-scrollbar {
+    display: none;
 }
 
 .teacher-index-card > div {
     position: relative;
     text-align: center;
-}
+} 
 
 .card-back {
     position: absolute;
@@ -177,6 +197,14 @@ body {
     width: 100%;
     height: 100%;
     transition: .4s;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subjects-name {
+    line-height: 150%;
 }
 
 .teacher-index-card:hover .card-back {
@@ -191,9 +219,23 @@ body {
     background-color: var(--background-black);
 }
 
-#img {
+#img-frame {
     width: 50%;
-    margin: 2vh;
+    aspect-ratio: 1/1;
+    margin-top: 10%;
+
+    border-radius: 100%;
+
+    overflow: hidden;
+
+    margin-bottom: 2vh;
+}
+
+#img {
+    object-fit: scale-down;
+
+    width: 100%;
+    height: auto;
 }
 
 .card-front > p {
@@ -209,9 +251,34 @@ body {
     font-weight: 400;
 }
 
+.card-back > p {
+    font-size: 23px;
+    font-family: "Pretendard Variable";
+    font-weight: 700;
+    margin-top: 7%;
+    margin-bottom: 2%;
+}
+
+.card-back > div {
+    font-size: 15px;
+    font-family: "Pretendard Variable";
+    font-weight: 400;
+}
+
 @media (max-width: 500px) {
     #content-box {
         grid-template-columns: repeat(auto-fill, minmax(150px, auto));
         border: 4vw solid rgba(0, 0, 0, 0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(2vh);
+    }
+    
+    to{
+        opacity: 1;
     }
 }

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WITTY</title>
+    <link rel="stylesheet" href="/main.css">
+    <!-- <link rel="mainsheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" /> -->
+    <link rel="stylesheet" as="style"
+    crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+<body onselectstart="return false">
+    <script src="/main.js"></script>
+    <div id="nav-bar-box">
+        <div id="WITTY-logo-box" onclick="window.scrollTo({top:0})">
+            <img id="WITTY-logo-svg" src="/svgs/WITTY-white.svg" alt="WITTY-white">
+            <div id="WITTY-logo-text">WITTY</div>
+        </div>
+        <form action="/search" method="GET" id="nav-searchform">
+            <label for="nav-bar-search" id="search-icon-box"><img src="/svgs/search.svg" alt="Search" id="search-icon"></label>
+            <input type="text" id="nav-bar-search" name="search" list="name-auto-complete" onblur="hasEnteredSearch()" onfocus="hasFocusedSearch()">
+            <!-- <datalist id="name-auto-complete">
+                <% for (const i in teacherJsonEjs.teachers) { %>
+                    <option value="<%= teacherJsonEjs.teachers[i].location.name %>"></option>
+                <% } %>
+            </datalist> -->
+        </form>
+    </div>
+    <!-- <div id="filter">
+        <div id="filter-btn"><label for="filter-btn"><img src="/svgs/filter.svg" alt="filter" id="filter-icon"></label></div>
+        <div id="filter-dropdown">
+            <% for(const i in teacherJsonEjs.teachers) { %>
+                <button ></button>
+            <% } %>
+        </div>
+    </div> -->
+    <div id="content-box">
+        <%console.log(locationNameCategoryJsonData[1]); for (const i in teacherJsonEjs.teachers) { %>
+            <div class="teacher-index-card">
+                <div>
+                    <div class="card-front">
+                        <div id="img-frame">
+                            <img id="img" src="<%- !teacherJsonEjs.teachers[i].url ? "/imgs/user.jpeg" : teacherJsonEjs.teachers[i].url %>" alt="">
+                        </div>
+                        <p><%= teacherJsonEjs.teachers[i].name %></p>
+                        <div>선생님</div>
+                    </div>
+                    <div class="card-back">
+                        <p>담당 교과</p>
+                        <div class="subjects-name"><%- teacherJsonEjs.teachers[i].subjects.map(subject => Subject[subject]).join("<br>") %></div>
+                        <p>교무실 위치</p>
+                        <div><%= teacherJsonEjs.teachers[i].location.building %> <%= teacherJsonEjs.teachers[i].location.floor %>층 <%= teacherJsonEjs.teachers[i].location.name %></div>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>
