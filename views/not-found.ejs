@@ -12,9 +12,9 @@
 <body onselectstart="return false">
     <script src="/main.js"></script>
     <div id="nav-bar-box">
-        <div id="WITTY-logo-box" onclick="location.href='/'">
-            <img id="WITTY-logo-svg" src="/svgs/WITTY-white.svg" alt="WITTY-white">
-            <div id="WITTY-logo-text">WITTY</div>
+        <div class="WITTY-logo-box" onclick="location.href='/'">
+            <img class="WITTY-logo-svg" src="/svgs/WITTY-white.svg" alt="WITTY-white">
+            <div class="WITTY-logo-text">WITTY</div>
         </div>
         <form action="/search" method="GET" id="nav-searchform">
             <input type="text" id="nav-bar-search" name="search" onblur="hasEnteredSearch()" onfocus="hasFocusedSearch()">
@@ -23,6 +23,14 @@
     </div>
     <div id="not-found-box">
         <div id="not-found">요청 페이지를 찾을 수 없습니다 <%- randomEmoji %></div>
+        <div id="status">HTML status 404 Not found</div>
+    </div>    
+    <div id="footer">
+        <div id="footer-WITTY">
+            <img class="WITTY-logo-svg" src="/svgs/WITTY-white.svg" alt="WITTY-white">
+            <div class="WITTY-logo-text">WITTY</div>
+        </div>
+        <div id="copyright">Copyright 2024. All pictures cannot be copied without permission.</div>
     </div>
 </body>
 </html>

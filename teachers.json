@@ -22,7 +22,7 @@
         },
         {
             "name": "신선미",
-            "subjects": [ 15, 16 ],
+            "subjects": [ 8, 15, 16 ],
             "location": {
                 "building": "창조관",
                 "floor": 6,
@@ -78,7 +78,7 @@
                 "floor": 1,
                 "name": "대외협력부"
             },
-            "url": ""
+            "url": "/imgs/김성아.jpg"
         },
         {
             "name": "Jang Yang",
@@ -98,7 +98,7 @@
                 "floor": 1,
                 "name": "대외협력부"
             },
-            "url": "/imgs/1.jpg"
+            "url": "/imgs/정재우.jpg"
         },
         {
             "name": "김은향",
@@ -122,7 +122,7 @@
         },
         {
             "name": "조민수",
-            "subjects": [ 23, 2 ],
+            "subjects": [ 2, 23, 37 ],
             "location": {
                 "building": "비전관",
                 "floor": 3,
@@ -132,7 +132,7 @@
         },
         {
             "name": "강호준",
-            "subjects": [ 0 ],
+            "subjects": [ 2, 13 ],
             "location": {
                 "building": "비전관",
                 "floor": 3,
@@ -147,6 +147,516 @@
                 "building": "비전관",
                 "floor": 3,
                 "name": "3학년부"
+            },
+            "url": ""
+        },
+        {
+            "name": "이유희",
+            "subjects": [ 9 ],
+            "location": {
+                "building": "비전관",
+                "floor": 3,
+                "name": "진로진학부"
+            },
+            "url": ""
+        },
+        {
+            "name": "이형섭",
+            "subjects": [ 20 ],
+            "location": {
+                "building": "비전관",
+                "floor": 3,
+                "name": "진로진학부"
+            },
+            "url": ""
+        },
+        {
+            "name": "김윤정",
+            "subjects": [ 1, 24 ],
+            "location": {
+                "building": "비전관",
+                "floor": 3,
+                "name": "진로진학부"
+            },
+            "url": ""
+        },
+        {
+            "name": "서명호",
+            "subjects": [ 12, 24 ],
+            "location": {
+                "building": "비전관",
+                "floor": 3,
+                "name": "진로진학부"
+            },
+            "url": ""
+        },
+        {
+            "name": "심두식",
+            "subjects": [ 10 ],
+            "location": {
+                "building": "비전관",
+                "floor": 1,
+                "name": "환경복지부"
+            },
+            "url": ""
+        },
+        {
+            "name": "장선희",
+            "subjects": [ 3 ],
+            "location": {
+                "building": "비전관",
+                "floor": 1,
+                "name": "환경복지부"
+            },
+            "url": ""
+        },
+        {
+            "name": "김종구",
+            "subjects": [ 25 ],
+            "location": {
+                "building": "비전관",
+                "floor": 1,
+                "name": "환경복지부"
+            },
+            "url": ""
+        },
+        {
+            "name": "이상희",
+            "subjects": [ 26 ],
+            "location": {
+                "building": "비전관",
+                "floor": 1,
+                "name": "환경복지부"
+            },
+            "url": ""
+        },
+        {
+            "name": "정문영",
+            "subjects": [ 27 ],
+            "location": {
+                "building": "비전관",
+                "floor": 1,
+                "name": "연구기획부"
+            },
+            "url": "/imgs/정문영.jpg"
+        },
+        {
+            "name": "진장현",
+            "subjects": [ 27 ],
+            "location": {
+                "building": "비전관",
+                "floor": 1,
+                "name": "연구기획부"
+            },
+            "url": ""
+        },
+        {
+            "name": "맹희숙",
+            "subjects": [ 27 ],
+            "location": {
+                "building": "비전관",
+                "floor": 1,
+                "name": "연구기획부"
+            },
+            "url": ""
+        },
+        {
+            "name": "양연희",
+            "subjects": [ 27 ],
+            "location": {
+                "building": "비전관",
+                "floor": 1,
+                "name": "연구기획부"
+            },
+            "url": ""
+        },
+        {
+            "name": "두병인",
+            "subjects": [ 28 ],
+            "location": {
+                "building": "비전관",
+                "floor": 1,
+                "name": "연구기획부"
+            },
+            "url": ""
+        },
+        {
+            "name": "진정화",
+            "subjects": [ 20 ],
+            "location": {
+                "building": "비전관",
+                "floor": 1,
+                "name": "교무기획부"
+            },
+            "url": ""
+        },
+        {
+            "name": "송선미",
+            "subjects": [ 29 ],
+            "location": {
+                "building": "비전관",
+                "floor": 1,
+                "name": "교무기획부"
+            },
+            "url": "/imgs/송선미.jpg"
+        },
+        {
+            "name": "정재민",
+            "subjects": [ 24 ],
+            "location": {
+                "building": "비전관",
+                "floor": 1,
+                "name": "교무기획부"
+            },
+            "url": ""
+        },
+        {
+            "name": "오명숙",
+            "subjects": [ 21 ],
+            "location": {
+                "building": "비전관",
+                "floor": 1,
+                "name": "교무기획부"
+            },
+            "url": ""
+        },
+        {
+            "name": "심희정",
+            "subjects": [ 3 ],
+            "location": {
+                "building": "비전관",
+                "floor": 1,
+                "name": "교무기획부"
+            },
+            "url": ""
+        },
+        {
+            "name": "심의식",
+            "subjects": [ 21 ],
+            "location": {
+                "building": "비전관",
+                "floor": 1,
+                "name": "교무기획부"
+            },
+            "url": ""
+        },
+        {
+            "name": "박정남",
+            "subjects": [ 30 ],
+            "location": {
+                "building": "비전관",
+                "floor": 1,
+                "name": "학부모상담실"
+            },
+            "url": ""
+        },
+        {
+            "name": "최기영",
+            "subjects": [ 2, 35 ],
+            "location": {
+                "building": "비전관",
+                "floor": 1,
+                "name": "교육과정부"
+            },
+            "url": ""
+        },
+        {
+            "name": "정귀영",
+            "subjects": [ 35, 36 ],
+            "location": {
+                "building": "비전관",
+                "floor": 1,
+                "name": "교육과정부"
+            },
+            "url": ""
+        },
+        {
+            "name": "박상희",
+            "subjects": [ 32 ],
+            "location": {
+                "building": "비전관",
+                "floor": 1,
+                "name": "교육과정부"
+            },
+            "url": ""
+        },
+        {
+            "name": "고영일",
+            "subjects": [ 1, 24 ],
+            "location": {
+                "building": "비전관",
+                "floor": 1,
+                "name": "교육과정부"
+            },
+            "url": ""
+        },
+        {
+            "name": "이훈주",
+            "subjects": [ 33 ],
+            "location": {
+                "building": "비전관",
+                "floor": 1,
+                "name": "교육과정부"
+            },
+            "url": ""
+        },
+        {
+            "name": "최장권",
+            "subjects": [ 42 ],
+            "location": {
+                "building": "창조관",
+                "floor": 3,
+                "name": "경영회계부"
+            },
+            "url": ""
+        },
+        {
+            "name": "김연선",
+            "subjects": [ 41, 42, 43 ],
+            "location": {
+                "building": "창조관",
+                "floor": 3,
+                "name": "경영회계부"
+            },
+            "url": ""
+        },
+        {
+            "name": "김현민",
+            "subjects": [ 44, 45 ],
+            "location": {
+                "building": "창조관",
+                "floor": 3,
+                "name": "경영회계부"
+            },
+            "url": "/imgs/김현민.jpg"
+        },
+        {
+            "name": "신윤진",
+            "subjects": [ 40, 46 ],
+            "location": {
+                "building": "창조관",
+                "floor": 3,
+                "name": "경영회계부"
+            },
+            "url": ""
+        },
+        {
+            "name": "배유미",
+            "subjects": [ 40, 47 ],
+            "location": {
+                "building": "창조관",
+                "floor": 3,
+                "name": "경영회계부"
+            },
+            "url": "/imgs/배유미.png"
+        },
+        {
+            "name": "최수연",
+            "subjects": [ 29 ],
+            "location": {
+                "building": "창조관",
+                "floor": 3,
+                "name": "경영회계부"
+            },
+            "url": "/imgs/최수연.jpg"
+        },
+        {
+            "name": "김지응",
+            "subjects": [ 38 ],
+            "location": {
+                "building": "창조관",
+                "floor": 4,
+                "name": "빅데이터정보부"
+            },
+            "url": ""
+        },
+        {
+            "name": "김미영",
+            "subjects": [ 2, 35 ],
+            "location": {
+                "building": "창조관",
+                "floor": 4,
+                "name": "빅데이터정보부"
+            },
+            "url": "/imgs/김미영.jpeg"
+        },
+        {
+            "name": "황혜정",
+            "subjects": [ 40, 41 ],
+            "location": {
+                "building": "창조관",
+                "floor": 4,
+                "name": "빅데이터정보부"
+            },
+            "url": ""
+        },
+        {
+            "name": "윤현미",
+            "subjects": [ 5, 39 ],
+            "location": {
+                "building": "창조관",
+                "floor": 4,
+                "name": "빅데이터정보부"
+            },
+            "url": ""
+        },
+        {
+            "name": "김정일",
+            "subjects": [ 2, 4 ],
+            "location": {
+                "building": "창조관",
+                "floor": 4,
+                "name": "빅데이터정보부"
+            },
+            "url": ""
+        },
+        {
+            "name": "김희일",
+            "subjects": [ 48 ],
+            "location": {
+                "building": "비전관",
+                "floor": 1,
+                "name": "교장실"
+            },
+            "url": ""
+        },
+        {
+            "name": "이원실",
+            "subjects": [ 21 ],
+            "location": {
+                "building": "서관",
+                "floor": 3,
+                "name": "1학년부"
+            },
+            "url": ""
+        },
+        {
+            "name": "이진희",
+            "subjects": [ 24 ],
+            "location": {
+                "building": "서관",
+                "floor": 3,
+                "name": "1학년부"
+            },
+            "url": ""
+        },
+        {
+            "name": "문영미",
+            "subjects": [ 34 ],
+            "location": {
+                "building": "동관",
+                "floor": 1,
+                "name": "보건간호부"
+            },
+            "url": ""
+        },
+        {
+            "name": "이선자",
+            "subjects": [ 49, 50 ],
+            "location": {
+                "building": "동관",
+                "floor": 1,
+                "name": "보건간호부"
+            },
+            "url": ""
+        },
+        {
+            "name": "이은주",
+            "subjects": [ 49, 50 ],
+            "location": {
+                "building": "동관",
+                "floor": 1,
+                "name": "보건간호부"
+            },
+            "url": ""
+        },
+        {
+            "name": "강수연",
+            "subjects": [ 45 ],
+            "location": {
+                "building": "동관",
+                "floor": 1,
+                "name": "보건간호부"
+            },
+            "url": ""
+        },
+        {
+            "name": "김유정",
+            "subjects": [ 51, 52 ],
+            "location": {
+                "building": "동관",
+                "floor": 1,
+                "name": "보건간호부"
+            },
+            "url": ""
+        },
+        {
+            "name": "조성인",
+            "subjects": [ 10 ],
+            "location": {
+                "building": "서관",
+                "floor": 4,
+                "name": "학생생활안전부"
+            },
+            "url": ""
+        },
+        {
+            "name": "박찬호",
+            "subjects": [ 19 ],
+            "location": {
+                "building": "서관",
+                "floor": 4,
+                "name": "학생생활안전부"
+            },
+            "url": "/imgs/박찬호.jpg"
+        },
+        {
+            "name": "김대은",
+            "subjects": [ 28, 53 ],
+            "location": {
+                "building": "서관",
+                "floor": 4,
+                "name": "학생생활안전부"
+            },
+            "url": ""
+        },
+        {
+            "name": "채현주",
+            "subjects": [ 10 ],
+            "location": {
+                "building": "서관",
+                "floor": 4,
+                "name": "학생생활안전부"
+            },
+            "url": ""
+        },
+        {
+            "name": "유기현",
+            "subjects": [ 28 ],
+            "location": {
+                "building": "서관",
+                "floor": 4,
+                "name": "학생생활안전부"
+            },
+            "url": ""
+        },
+        {
+            "name": "장선옥",
+            "subjects": [ 27 ],
+            "location": {
+                "building": "서관",
+                "floor": 4,
+                "name": "학생생활안전부"
+            },
+            "url": ""
+        },
+        {
+            "name": "민원용",
+            "subjects": [ 54 ],
+            "location": {
+                "building": "서관",
+                "floor": 4,
+                "name": "학생생활안전부"
             },
             "url": ""
         }

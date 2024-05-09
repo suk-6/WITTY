@@ -4,6 +4,10 @@
     --dukyoung-color : #006DBB;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
 
@@ -40,7 +44,7 @@ body {
     margin: 0 2vw;
 }
 
-#WITTY-logo-box {
+.WITTY-logo-box {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -49,11 +53,11 @@ body {
     cursor: default;
 }
 
-#WITTY-logo-svg {
+.WITTY-logo-svg {
     width: 4vh;
 }
 
-#WITTY-logo-text {
+.WITTY-logo-text {
     font-size: 4vh;
     font-family: "Pretendard Variable";
     font-weight: 900;
@@ -103,7 +107,8 @@ body {
     transition: 0.2s;
     width: 3vh;
     filter: invert(99%) sepia(6%) saturate(785%) hue-rotate(249deg) brightness(112%) contrast(100%);
-}
+    cursor: text;
+}   
 
 #nav-bar-search:focus {
     width: 20vw;
@@ -120,7 +125,7 @@ body {
 
 @media (max-width: 500px) {
     #nav-bar-search {
-        border: none;
+        border: 0.5vw solid #fff;
     }
 
     #nav-bar-search:focus {
@@ -134,10 +139,123 @@ body {
 }
 
 /* section */
+#office-filter {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    position: relative;
+}
+
+#office-filter-box {
+    position: relative;
+}
+
+#office-filter-btn {
+    width: 5vw;
+    height: auto;
+    margin: 5vh 2vw 0;
+    float: right;
+
+    cursor: pointer;
+    
+    transition-duration: .2s;
+    /* transform: none; */
+    transform-origin: 50% calc(50% - .7vh);
+
+}
+
+#filter-icon {
+    width: 100%;
+}
+
+#filterform-box {
+    display: none;
+
+    overflow-y: scroll;
+    position: absolute;
+    right: 0;
+    top: 100%;
+}
+
+#filterform-box > form {
+    height: 100%;
+}
+
+#filterform-submit {
+    position: absolute;
+    display: none;
+    right: 0;
+    top: calc(100%);
+}
+
+#filterform-submit.show {
+    display: block;
+}
+
+#office-filter-btn.show {
+    transform: rotateZ(180deg);
+}
+
+#filterform-box.show {
+    z-index: 99;
+    display: block;
+    
+    width: 20vw;
+    min-width: 150px;
+    height: 30vw;
+    min-height: 200px;
+    padding: 3vh 3vw;
+    
+    background-color: #fff;
+    border-radius: 7px;
+
+    box-shadow: 0px 10px 10px -5px rgba(0,0,0,0.25);
+}
+
+.filterform-checkbox > div{
+    padding: 2vh 0;
+    cursor: pointer;
+}
+
+.filterform-checkbox > div > span {
+    font-size: 20px;
+    font-family: "Pretendard Variable";
+    font-weight: 500;
+}
+
+@media (max-width: 500px) {
+    #office-filter-btn {
+        width: 10vw;
+        margin: 5vh 5vw 0;
+    }
+}
+
 #content-box {
+    animation-name: fadeIn;
+    animation-duration: 0.75s;
+
+    padding-bottom: 20vh;
+}
+
+.location-name {
+    width: calc(100% - 1.5vw);
+
+    font-size: 40px;
+    font-family: "Pretendard Variable";
+    font-weight: 700;
+    
+    padding: 10vh 0 0 1.5vw;
+}
+
+.location-name:nth-child(1) {
+    padding-top: 0;
+}
+
+#cards-box {
     width: 100%;
     height: 100%;
-    padding-top: 5vh;
+    padding-top: 1vh;
     border: 2vw solid rgba(0, 0, 0, 0);
     box-sizing: border-box;
     display: grid;
@@ -146,16 +264,7 @@ body {
     column-gap: 2vw;
     align-items: stretch;
 
-    animation-name: fadeIn;
-    animation-duration: 0.75s;
-
     cursor: default;
-}
-
-#filter {
-    width: 100%;
-    height: auto;
-    text-align: right;
 }
 
 .teacher-index-card {
@@ -182,7 +291,6 @@ body {
 }
 
 .teacher-index-card > div {
-    position: relative;
     text-align: center;
 } 
 
@@ -229,10 +337,15 @@ body {
     overflow: hidden;
 
     margin-bottom: 2vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #img {
-    object-fit: scale-down;
+    object-fit: fill;
 
     width: 100%;
     height: auto;
@@ -265,8 +378,45 @@ body {
     font-weight: 400;
 }
 
+/* footer */
+#footer {
+    width: 100%;
+    height: 30vh;
+    
+    background-color: var(--background-black);
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: end;
+    padding: 4vh 1vw;
+
+    box-sizing: border-box;
+}
+
+.footer-content, #copyright {
+    padding: 1vh 2vw;
+    font-size: 15px;
+    font-family: "Pretendard Variable";
+    font-weight: 400;
+    color: #fff;
+}
+
+#footer-WITTY {
+    cursor: default;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    padding: 1vh 2vw;
+}
+
+#copyright {
+    color: #999;
+}
+
+/* root */
 @media (max-width: 500px) {
-    #content-box {
+    #cards-box {
         grid-template-columns: repeat(auto-fill, minmax(150px, auto));
         border: 4vw solid rgba(0, 0, 0, 0);
     }

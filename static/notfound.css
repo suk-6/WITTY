@@ -8,10 +8,18 @@
     justify-content: center;
 }
 
-#not-found {
+#not-found, #status {
     color: #777;
-    font-size: 5vw;
-
     font-family: "Pretendard Variable";
+}
+
+#not-found {
+    font-size: 5vw;
     font-weight: 700;
+}
+
+#status {
+    padding-top: 2vh;
+    font-size: 2vw;
+    font-weight: 600;
 }

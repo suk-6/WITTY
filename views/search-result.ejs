@@ -12,39 +12,74 @@
 <body onselectstart="return false">
     <script src="/main.js"></script>
     <div id="nav-bar-box">
-        <div id="WITTY-logo-box" onclick="location.href='/'">
-            <img id="WITTY-logo-svg" src="/svgs/WITTY-white.svg" alt="WITTY-white">
-            <div id="WITTY-logo-text">WITTY</div>
+        <div class="WITTY-logo-box" onclick="location.href='/'">
+            <img class="WITTY-logo-svg" src="/svgs/WITTY-white.svg" alt="WITTY-white">
+            <div class="WITTY-logo-text">WITTY</div>
         </div>
         <form action="/search" method="GET" id="nav-searchform">
             <input type="text" id="nav-bar-search" name="search" onblur="hasEnteredSearch()" onfocus="hasFocusedSearch()">
             <label for="nav-bar-search" id="search-icon-box"><img src="/svgs/search.svg" alt="Search" id="search-icon"></label>
         </form>
         </div>
-    <% if ((teacherJsonEjs.length) == 0) { %> <div id="not-found-box">
-        <div id="not-found">검색 결과가 없습니다 <%- randomEmoji %></div>
-    </div> <% } else { %>
-    <div id="content-box">
-        <% for (const i in teacherJsonEjs) { %>
-            <div class="teacher-index-card">
-                <div>
-                    <div class="card-front">
-                        <div id="img-frame">
-                            <img id="img" src="<%- !teacherJsonEjs[i].url ? "/imgs/user.jpeg" : teacherJsonEjs[i].url %>" alt="">
-                        </div>
-                        <p><%= teacherJsonEjs[i].name %></p>
-                        <div>선생님</div>
-                    </div>
-                    <div class="card-back">
-                        <p>담당 교과</p>
-                        <div class="subjects-name"><%- teacherJsonEjs[i].subjects.map(subject => Subject[subject]).join("<br>") %></div>
-                        <p>교무실 위치</p>
-                        <div><%= teacherJsonEjs[i].location.building %> <%= teacherJsonEjs[i].location.floor %>층 <%= teacherJsonEjs[i].location.name %></div>
-                    </div>
-                </div>
-            </div>
-        <% } %>
     </div>
+    <div id="office-filter">
+        <div id="office-filter-box">
+            <div id="office-filter-btn" onclick="filterDropDown()">
+                <img id="filter-icon" src="/svgs/filter.svg">
+            </div>
+            <div id="filterform-box">
+                <form id="filterform" action="/search" method="GET">
+                    <% for (let i of originLocationNameCategoryJsonData) { %>
+                    <label for="<%= i.locationName %>" class="filterform-checkbox">
+                        <div>
+                            <input type="checkbox" id="<%= i.locationName %>" name="filter" value="<%= i.locationName %>">
+                            <span><%= i.locationName %></span>
+                        </div>
+                    </label>
+                    <hr>
+                    <% } %>
+                </form>
+            </div>
+            <button id="filterform-submit" type="submit" form="filterform">Search</button>
+        </div>
+    </div>
+    <div id="content-box">
+    <% if (!locationNameCategoryJsonData.length) { %> <div id="not-found-box">
+        <div id="not-found">검색 결과가 없습니다 <%- randomEmoji %></div>
+        </div>
+        <% } else { %>
+            <% for (const i of Object.keys(locationNameCategoryJsonData)) { %>
+                <div class="location-name"><%= locationNameCategoryJsonData[i].locationName %></div>
+                
+                <div id="cards-box">
+                    <% for (const j of Object.keys(locationNameCategoryJsonData[i].teacherInformation)) { %>
+                    <div class="teacher-index-card">
+                            <div class="card-front">
+                                <div id="img-frame">
+                                    <img id="img" src="<%- !locationNameCategoryJsonData[i].teacherInformation[j].url ? "/imgs/user.jpeg" : locationNameCategoryJsonData[i].teacherInformation[j].url %>" alt="">
+                                </div>
+                                <p><%= locationNameCategoryJsonData[i].teacherInformation[j].name %></p>
+                                <div>선생님</div>
+                            </div>
+                            <div class="card-back">
+                                <p>담당 교과</p>
+                                <div class="subjects-name"><%- locationNameCategoryJsonData[i].teacherInformation[j].subjects.map(subject => Subject[subject]).join("<br>") %></div>
+                                <p>교무실 위치</p>
+                                <div><%= locationNameCategoryJsonData[i].teacherInformation[j].location.building %> <%= locationNameCategoryJsonData[i].teacherInformation[j].location.floor %>층 <%= locationNameCategoryJsonData[i].teacherInformation[j].location.name %></div>
+                            </div>
+                    </div>
+                    <% } %>
+                </div>
+            <% } %>
+            </div>
     <% } %>
+    </div>
+    <div id="footer">
+        <div id="footer-WITTY">
+            <img class="WITTY-logo-svg" src="/svgs/WITTY-white.svg" alt="WITTY-white">
+            <div class="WITTY-logo-text">WITTY</div>
+        </div>
+        <div id="copyright">Copyright 2024. All pictures cannot be copied without permission.</div>
+    </div>
 </body>
 </html>
